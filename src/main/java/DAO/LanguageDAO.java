@@ -1,18 +1,18 @@
 package DAO;
 
-import MODEL.Tag;
+import MODEL.Language;
 
 /**
- * DAO específico para la entidad Tag.
+ * DAO específico para la entidad Language.
  *
  * Hereda de GenericDAO para tener CRUD completo sin repetir código.
  */
-public class TagDAO extends GenericDAO<Tag> {
+public class LanguageDAO extends GenericDAO<Language> {
 
     /**
      * Constructor que indica al DAO genérico qué entidad debe manejar.
      */
-    public TagDAO() {
-        super(Tag.class);
+    public LanguageDAO() {
+        super(Language.class);
     }
 }
