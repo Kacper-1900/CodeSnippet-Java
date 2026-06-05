@@ -87,15 +87,16 @@ Contiene excepciones personalizadas para controlar errores de validación.
 
 Las tecnologías utilizadas en el proyecto son:
 
-| Tecnología | Uso |
-|---|---|
-| Java | Lenguaje principal |
-| Maven | Gestión del proyecto |
-| Hibernate | Persistencia de datos |
-| JPA | Mapeo objeto-relacional |
-| MySQL | Base de datos |
-| Java Swing | Interfaz gráfica |
-| GitHub | Control de versiones |
+| Tecnología | Uso                     |
+|------------|-------------------------|
+| Java       | Lenguaje principal      |
+| Maven      | Gestión del proyecto    |
+| Hibernate  | Persistencia de datos   |
+| JPA        | Mapeo objeto-relacional |
+| MySQL      | Base de datos           |    
+| Java Swing | Interfaz gráfica        |
+| GitHub     | Control de versiones    |
+
 
 ---
 
