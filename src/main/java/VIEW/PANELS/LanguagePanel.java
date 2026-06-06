@@ -1,26 +1,26 @@
 package VIEW.PANELS;
 
-import DAO.TagDAO;
-import MODEL.Tag;
+import DAO.LanguageDAO;
+import MODEL.Language;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.List;
 
-public class TagPanel extends JPanel {
+public class LanguagePanel extends JPanel {
     private final JTable table;
     private final DefaultTableModel model;
     private final JTextField txtName;
     private final JButton btnAdd, btnDelete;
-    private final TagDAO tagDAO;
+    private final LanguageDAO languageDAO;
 
-    public TagPanel() {
-        this.tagDAO = new TagDAO();
+    public LanguagePanel() {
+        this.languageDAO = new LanguageDAO();
         setLayout(new BorderLayout(10, 10));
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         JPanel formPanel = new JPanel(new GridBagLayout());
-        formPanel.setBorder(BorderFactory.createTitledBorder("Etiquetas"));
+        formPanel.setBorder(BorderFactory.createTitledBorder("Lenguajes"));
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL; gbc.insets = new Insets(5, 5, 5, 5);
 
@@ -33,23 +33,23 @@ public class TagPanel extends JPanel {
         gbc.gridx = 0; gbc.gridy = 1; gbc.gridwidth = 2; formPanel.add(btnBox, gbc);
         add(formPanel, BorderLayout.WEST);
 
-        String[] cols = {"ID", "Tag"};
+        String[] cols = {"ID", "Lenguaje"};
         model = new DefaultTableModel(cols, 0) { @Override public boolean isCellEditable(int r, int c) { return false; } };
         table = new JTable(model); add(new JScrollPane(table), BorderLayout.CENTER);
 
         btnAdd.addActionListener(e -> {
             String name = txtName.getText().trim();
-            if(!name.isEmpty()) { Tag t = new Tag(); t.setName(name); tagDAO.saveOrUpdate(t); txtName.setText(""); cargar(); }
+            if(!name.isEmpty()) { Language l = new Language(); l.setName(name); languageDAO.saveOrUpdate(l); txtName.setText(""); cargar(); }
         });
         btnDelete.addActionListener(e -> {
             int row = table.getSelectedRow();
-            if(row != -1) { Tag t = new Tag(); t.setId((Integer)model.getValueAt(row, 0)); tagDAO.delete(t); cargar(); }
+            if(row != -1) { Language l = new Language(); l.setId((Integer)model.getValueAt(row, 0)); languageDAO.delete(l); cargar(); }
         });
         cargar();
     }
     private void cargar() {
         model.setRowCount(0);
-        List<Tag> lista = tagDAO.findAll();
-        for(Tag t : lista) model.addRow(new Object[]{t.getId(), t.getName()});
+        List<Language> lista = languageDAO.findAll();
+        for(Language l : lista) model.addRow(new Object[]{l.getId(), l.getName()});
     }
 }
