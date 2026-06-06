@@ -19,8 +19,13 @@
 
 ### Lista de Prompts
 <ul>
-    <li><b>Claude: </b>Genera un esquema de como quedarían las clases de este proyecto en java. No añadas clases opcionales. No generes ninguna clase solo crea el esquema.(adjunte el pdf del ejercicio)</li>
     <li><b>Github Copilot: </b> A esta IA no le mandamos prompts directamente, ya que es un plugin que tenemos dentro del ide para ayudar con el codigo. Nos ayudo en las clases DAO y SERVICE. </li>
+    <li><b>Claude: </b> Como quedarían las clases de este proyecto en java. No añadas clases opcionales. No generes ninguna clase solo crea el esquema.(adjunte el pdf del ejercicio)</li>
+    <li><b>Claude: </b> Ayudame a diseñar estas clases de Java Swing para mi proyecto.</li>
+    <li><b>Claude: </b> Estas clases repiten muchos metodos, como harías una clase generica que tenga estos metodos y se puedan llamar a estos directamente.</li>
     <li><b>ChatGPT: </b> Comenta el siguiente código, explicando cada parte de manera detallada. (adjunte el codigo)</li>
+    <li><b>ChatGPT: </b> Ves bien este texto para la app plantum de generar UML en base a codigo?</li>
+    <li><b>ChatGPT: </b> Este diagrama de flujo esta completo para el proyecto? (adjunte imagen del UML)</li>
     <li><b>ChatGPT: </b> Mejora la redacción de este texto (adjunte el fichero especificaciones_tecnicas.md) No lo hagas demasiado profesional y decoralo para que quede bien. </li>
+    <li><b>ChatGPT: </b> Ves bien este modelo de negocio? (adjunte el modelo_negocio.md) corrige lo que veas necesario y si añade lo que creas imprescindible.</li>
 </ul>
