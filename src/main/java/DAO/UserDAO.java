@@ -16,4 +16,3 @@ public class UserDAO extends GenericDAO<User> {
         super(User.class);
     }
 }
-

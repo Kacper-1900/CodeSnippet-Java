@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+             https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
              version="3.2">
-    <persistence-unit name="default">
+
+    <persistence-unit name="codesnippetPU">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Entidades -->
+        <class>MODEL.User</class>
+        <class>MODEL.Language</class>
+        <class>MODEL.Category</class>
+        <class>MODEL.Tag</class>
+        <class>MODEL.Snippet</class>
+
+        <properties>
+
+            <!-- Driver JDBC -->
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="com.mysql.cj.jdbc.Driver"/>
+
+            <!-- Base de datos -->
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:mysql://localhost:3306/codesnippet_db?useSSL=false&amp;serverTimezone=UTC"/>
+
+            <!-- Usuario -->
+            <property name="jakarta.persistence.jdbc.user"
+                      value="root"/>
+
+            <!-- Contraseña -->
+            <property name="jakarta.persistence.jdbc.password"
+                      value="1234"/>
+
+            <!-- Hibernate -->
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+
+            <!-- Mostrar SQL por consola -->
+            <property name="hibernate.show_sql"
+                      value="true"/>
+
+            <property name="hibernate.format_sql"
+                      value="true"/>
+
+            <!-- Actualiza tablas automáticamente -->
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update"/>
+
+        </properties>
 
     </persistence-unit>
+
 </persistence>

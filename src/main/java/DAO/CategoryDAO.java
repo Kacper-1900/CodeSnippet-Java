@@ -1,6 +1,5 @@
 package DAO;
 
-
 import MODEL.Category;
 
 /**

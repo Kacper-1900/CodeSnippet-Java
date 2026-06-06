@@ -52,6 +52,5 @@ CREATE TABLE snippet_tags (
     FOREIGN KEY (tag_id) REFERENCES tags(id) ON DELETE CASCADE
 );
 
--- Inserciones básicas de prueba requeridas para el inicio
 INSERT INTO languages (name) VALUES ('Java'), ('Python'), ('JavaScript'), ('SQL'), ('HTML'), ('CSS');
 INSERT INTO categories (name) VALUES ('Bases de Datos', ('Backend'), ('Frontend'), ('Algoritmos'), ('Seguridad');

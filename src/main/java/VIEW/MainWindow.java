@@ -24,10 +24,4 @@ public class MainWindow extends JFrame {
         add(tabbedPane, BorderLayout.CENTER);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            try { UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); } catch (Exception ignored) {}
-            new MainWindow().setVisible(true);
-        });
-    }
 }
