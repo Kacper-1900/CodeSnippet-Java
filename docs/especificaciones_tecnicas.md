@@ -92,7 +92,7 @@ Contiene excepciones personalizadas utilizadas para controlar errores de validac
 Las tecnologías utilizadas en el proyecto son:
 
 | Tecnología | Uso                     |
-| ---------- | ----------------------- |
+|------------|-------------------------|
 | Java       | Lenguaje principal      |
 | Maven      | Gestión del proyecto    |
 | Hibernate  | Persistencia de datos   |
@@ -100,6 +100,7 @@ Las tecnologías utilizadas en el proyecto son:
 | MySQL      | Base de datos           |
 | Java Swing | Interfaz gráfica        |
 | GitHub     | Control de versiones    |
+| Plantum    | Diagrama UML            |
 
 ---
 
