@@ -14,7 +14,6 @@ public class MainWindow extends JFrame {
 
         JTabbedPane tabbedPane = new JTabbedPane();
 
-        // Pestaña de Snippets vacía/básica por si la vuelves a programar
         tabbedPane.addTab("Fragmentos (Snippets)", new SnippetPanel());
         tabbedPane.addTab("Categorías", new CategoryPanel());
         tabbedPane.addTab("Lenguajes", new LanguagePanel());

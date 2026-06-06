@@ -30,15 +30,4 @@ public class HibernateUtil {
     public static EntityManager getEntityManager() {
         return entityManagerFactory.createEntityManager();
     }
-
-    /**
-     * Cierra la fábrica de EntityManager.
-     *
-     * Este método debería llamarse al cerrar la aplicación.
-     */
-    public static void close() {
-        if (entityManagerFactory != null && entityManagerFactory.isOpen()) {
-            entityManagerFactory.close();
-        }
-    }
 }
